@@ -1,0 +1,40 @@
+@import url('https://fonts.googleapis.com/css2?family=Fraunces:ital,opsz,wght@0,9..144,300;0,9..144,600;0,9..144,700;1,9..144,400&display=swap');
+@import url('https://fonts.googleapis.com/css2?family=Outfit:wght@300;400;500;600;700&display=swap');
+@import url('https://fonts.googleapis.com/css2?family=DM+Mono:wght@400;500&display=swap');
+@import 'tailwindcss';
+
+@theme {
+  --color-forest: #1a5c3a;
+  --color-forest-dark: #0f3b24;
+  --color-forest-light: #2d7a52;
+  --color-terra: #c4531f;
+  --color-terra-light: #e07040;
+  --color-gold: #c98a0f;
+  --color-gold-light: #f0b429;
+  --color-cream: #f5f0e4;
+  --color-cream-dark: #e8e0cc;
+  --color-bark: #7c5c3a;
+  --color-leaf: #4caf72;
+  --color-sky: #2a7ab8;
+}
+
+* {
+  scrollbar-width: none;
+}
+*::-webkit-scrollbar {
+  display: none;
+}
+
+html {
+  font-family: 'Outfit', sans-serif;
+  background-color: #f5f0e4;
+  color: #0f3b24;
+}
+
+.font-display {
+  font-family: 'Fraunces', serif;
+}
+
+.font-mono-dm {
+  font-family: 'DM Mono', monospace;
+}
