@@ -1,6 +1,6 @@
 const markers = [
-  {id:1,x:28,y:35,type:'wisata',name:'Curug Seribu'},
-  {id:2,x:55,y:22,type:'wisata',name:'Sawah Bertingkat'},
+  {id:1,x:28,y:35,type:'wisata',name:'Makam TGH sibawaeh'},
+  {id:2,x:55,y:22,type:'wisata',name:'Gili areng'},
   {id:3,x:72,y:48,type:'wisata',name:'Bukit Panorama'},
   {id:4,x:42,y:58,type:'umkm',name:'Batik Bu Sari'},
   {id:5,x:62,y:70,type:'umkm',name:'Kerajinan Pak Hadi'},
@@ -12,7 +12,7 @@ const markers = [
 
 const wisataData = [
   {id:1,name:'Curug Seribu',category:'Air Terjun',desc:'Air terjun bertingkat yang dikelilingi hutan lebat dengan pemandangan alam yang memukau. Cocok untuk wisata alam dan fotografi.',rating:4.8,visitors:'1.240',img:'https://images.unsplash.com/photo-1564460549828-f0219a31bf90?w=600&h=400&fit=crop&auto=format',jam:'07.00 – 17.00',tiket:'Rp 10.000'},
-  {id:2,name:'Sawah Bertingkat',category:'Alam Pertanian',desc:'Hamparan sawah terasering indah yang membentang di lereng bukit. Pemandangan terbaik saat musim tanam dan panen.',rating:4.6,visitors:'2.810',img:'https://images.unsplash.com/photo-1513415756790-2ac1db1297d0?w=600&h=400&fit=crop&auto=format',jam:'06.00 – 18.00',tiket:'Gratis'},
+  {id:2,name:'Gili areng',category:'Alam pulau',desc:'Pulau yang indah dengan potensi sebagai camp..',rating:4.6,visitors:'2.810',img:'https://images.unsplash.com/photo-1513415756790-2ac1db1297d0?w=600&h=400&fit=crop&auto=format',jam:'06.00 – 18.00',tiket:'Gratis'},
   {id:3,name:'Bukit Panorama',category:'Perbukitan',desc:'Puncak bukit dengan pemandangan 360° seluruh wilayah desa dan lembah sekitarnya. Spot terbaik untuk sunrise.',rating:4.9,visitors:'980',img:'https://images.unsplash.com/photo-1588084188698-e626698fd8cb?w=600&h=400&fit=crop&auto=format',jam:'05.00 – 18.00',tiket:'Rp 5.000'},
   {id:4,name:'Hutan Pinus',category:'Ekowisata',desc:'Hutan pinus seluas 12 hektar dengan jalur trekking, area kemah, dan spot foto yang instagramable di antara pepohonan tinggi.',rating:4.5,visitors:'1.650',img:'https://images.unsplash.com/photo-1593901138884-02ee723a96f7?w=600&h=400&fit=crop&auto=format',jam:'07.00 – 17.00',tiket:'Rp 8.000'}
 ];
