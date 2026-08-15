@@ -21,6 +21,8 @@ interface WisataItem {
   img: string
   jam: string
   tiket: string
+  lat: number
+  lng: number
 }
 
 interface UmkmItem {
@@ -33,6 +35,13 @@ interface UmkmItem {
   img: string
   omzet: string
   berdiri: string
+  lat: number
+  lng: number
+}
+
+function openMaps(lat: number, lng: number, name: string) {
+  const url = `https://www.google.com/maps/dir/?api=1&destination=${lat},${lng}&travelmode=driving&destination_place_name=${encodeURIComponent(name)}`
+  window.open(url, '_blank', 'noopener,noreferrer')
 }
 
 const markers: MapMarker[] = [
@@ -58,6 +67,8 @@ const wisataData: WisataItem[] = [
     img: 'https://images.unsplash.com/photo-1564460549828-f0219a31bf90?w=600&h=400&fit=crop&auto=format',
     jam: '07.00 – 17.00',
     tiket: 'Rp 10.000',
+    lat: -8.8412,
+    lng: 116.4978,
   },
   {
     id: 2,
@@ -69,6 +80,8 @@ const wisataData: WisataItem[] = [
     img: 'https://images.unsplash.com/photo-1513415756790-2ac1db1297d0?w=600&h=400&fit=crop&auto=format',
     jam: '06.00 – 18.00',
     tiket: 'Gratis',
+    lat: -8.8385,
+    lng: 116.5021,
   },
   {
     id: 3,
@@ -80,6 +93,8 @@ const wisataData: WisataItem[] = [
     img: 'https://images.unsplash.com/photo-1588084188698-e626698fd8cb?w=600&h=400&fit=crop&auto=format',
     jam: '05.00 – 18.00',
     tiket: 'Rp 5.000',
+    lat: -8.8361,
+    lng: 116.5063,
   },
   {
     id: 4,
@@ -91,6 +106,8 @@ const wisataData: WisataItem[] = [
     img: 'https://images.unsplash.com/photo-1593901138884-02ee723a96f7?w=600&h=400&fit=crop&auto=format',
     jam: '07.00 – 17.00',
     tiket: 'Rp 8.000',
+    lat: -8.8338,
+    lng: 116.5110,
   },
 ]
 
@@ -105,6 +122,8 @@ const umkmData: UmkmItem[] = [
     img: 'https://images.unsplash.com/photo-1590251869641-dd94fb569954?w=600&h=400&fit=crop&auto=format',
     omzet: 'Rp 8,5 jt/bln',
     berdiri: '1998',
+    lat: -8.8401,
+    lng: 116.5005,
   },
   {
     id: 2,
@@ -116,6 +135,8 @@ const umkmData: UmkmItem[] = [
     img: 'https://images.unsplash.com/photo-1604973104381-870c92f10343?w=600&h=400&fit=crop&auto=format',
     omzet: 'Rp 12 jt/bln',
     berdiri: '2005',
+    lat: -8.8425,
+    lng: 116.5038,
   },
   {
     id: 3,
@@ -127,6 +148,8 @@ const umkmData: UmkmItem[] = [
     img: 'https://images.unsplash.com/photo-1539755530862-00f623c00f52?w=600&h=400&fit=crop&auto=format',
     omzet: 'Rp 5,2 jt/bln',
     berdiri: '2012',
+    lat: -8.8448,
+    lng: 116.4992,
   },
   {
     id: 4,
@@ -138,6 +161,8 @@ const umkmData: UmkmItem[] = [
     img: 'https://images.unsplash.com/photo-1590605095243-072811dbe64c?w=600&h=400&fit=crop&auto=format',
     omzet: 'Rp 3,8 jt/bln',
     berdiri: '2018',
+    lat: -8.8437,
+    lng: 116.5055,
   },
 ]
 
@@ -468,9 +493,21 @@ export default function App() {
                       <span className="text-xs text-[#7c5c3a] bg-[#f0ead8] px-2 py-1 rounded-full">🕐 {w.jam.split('–')[0]}</span>
                       <span className="text-xs text-[#c4531f] bg-[#fae8e0] px-2 py-1 rounded-full font-semibold">{w.tiket}</span>
                     </div>
-                    <span className="text-xs text-[#2d7a52] font-semibold">
-                      {selectedCard === w.id ? '▲ Tutup' : '▼ Detail'}
-                    </span>
+                    <div className="flex items-center gap-2">
+                      <button
+                        onClick={(e) => { e.stopPropagation(); openMaps(w.lat, w.lng, w.name) }}
+                        className="flex items-center gap-1.5 bg-[#1a5c3a] hover:bg-[#0f3b24] text-white text-xs font-semibold px-3 py-1.5 rounded-full transition-all hover:scale-105 active:scale-95"
+                      >
+                        <svg width="11" height="11" viewBox="0 0 24 24" fill="none" stroke="currentColor" strokeWidth="2.5" strokeLinecap="round" strokeLinejoin="round">
+                          <path d="M12 2C8.13 2 5 5.13 5 9c0 5.25 7 13 7 13s7-7.75 7-13c0-3.87-3.13-7-7-7z"/>
+                          <circle cx="12" cy="9" r="2.5"/>
+                        </svg>
+                        Kunjungi
+                      </button>
+                      <span className="text-xs text-[#2d7a52] font-semibold">
+                        {selectedCard === w.id ? '▲' : '▼'}
+                      </span>
+                    </div>
                   </div>
                 </div>
               </div>
@@ -531,9 +568,21 @@ export default function App() {
                     <div className="flex gap-2">
                       <span className="text-xs text-[#c98a0f] bg-[#fdf4e0] px-2 py-1 rounded-full font-semibold">💰 {u.omzet}</span>
                     </div>
-                    <span className="text-xs text-[#c4531f] font-semibold">
-                      {selectedCard === u.id ? '▲ Tutup' : '▼ Produk'}
-                    </span>
+                    <div className="flex items-center gap-2">
+                      <button
+                        onClick={(e) => { e.stopPropagation(); openMaps(u.lat, u.lng, u.name) }}
+                        className="flex items-center gap-1.5 bg-[#c4531f] hover:bg-[#a03e12] text-white text-xs font-semibold px-3 py-1.5 rounded-full transition-all hover:scale-105 active:scale-95"
+                      >
+                        <svg width="11" height="11" viewBox="0 0 24 24" fill="none" stroke="currentColor" strokeWidth="2.5" strokeLinecap="round" strokeLinejoin="round">
+                          <path d="M12 2C8.13 2 5 5.13 5 9c0 5.25 7 13 7 13s7-7.75 7-13c0-3.87-3.13-7-7-7z"/>
+                          <circle cx="12" cy="9" r="2.5"/>
+                        </svg>
+                        Kunjungi
+                      </button>
+                      <span className="text-xs text-[#c4531f] font-semibold">
+                        {selectedCard === u.id ? '▲' : '▼'}
+                      </span>
+                    </div>
                   </div>
                 </div>
               </div>

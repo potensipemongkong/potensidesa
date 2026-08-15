@@ -1,99 +1,16 @@
-<!DOCTYPE html>
-<html lang="id">
-<head>
-  <meta charset="UTF-8">
-  <meta name="viewport" content="width=device-width, initial-scale=1.0">
-  <title>Desa Pemongkong — Peta Wisata & UMKM</title>
-  <link rel="stylesheet" href="style.css">
-  <script src="https://cdn.tailwindcss.com"></script>
-  <script>
-    tailwind.config = {
-      theme: {
-        extend: {
-          fontFamily: {
-            display: ['Fraunces', 'serif'],
-            outfit: ['Outfit', 'sans-serif'],
-            monoDM: ['DM Mono', 'monospace']
-          }
-        }
-      }
-    }
-  </script>
-</head>
-<body>
-<div class="min-h-screen bg-[#f5f0e4] text-[#0f3b24]">
-
-  <header class="bg-[#0f3b24] text-[#f5f0e4] px-6 py-4 flex items-center justify-between sticky top-0 z-50 shadow-lg">
-    <div class="flex items-center gap-3">
-      <div class="w-9 h-9 rounded-full bg-[#2d7a52] flex items-center justify-center text-lg">🌴</div>
-      <div>
-        <div class="font-display text-lg font-semibold leading-tight">Desa Pemongkong</div>
-        <div class="font-mono-dm text-[10px] text-[#4caf72] tracking-widest uppercase">Kec. Jerowaru · Kab. Lombok Timur</div>
-      </div>
-    </div>
-    <nav class="hidden md:flex items-center gap-6 text-sm font-medium">
-      <a href="#peta" class="text-[#a8d8bc] hover:text-[#f5f0e4] transition-colors">Peta</a>
-      <a href="#wisata" class="text-[#a8d8bc] hover:text-[#f5f0e4] transition-colors">Wisata</a>
-      <a href="#umkm" class="text-[#a8d8bc] hover:text-[#f5f0e4] transition-colors">UMKM</a>
-      <button class="bg-[#c4531f] hover:bg-[#e07040] text-white text-xs px-4 py-2 rounded-full transition-colors font-semibold">+ Tambah Data</button>
-    </nav>
-  </header>
-
-  <section class="relative overflow-hidden" style="background:linear-gradient(135deg,#0f3b24 0%,#1a5c3a 50%,#2d7a52 100%);min-height:320px">
-    <div class="absolute inset-0 opacity-10" style="background-image:linear-gradient(#4caf72 1px,transparent 1px),linear-gradient(90deg,#4caf72 1px,transparent 1px);background-size:40px 40px"></div>
-    <div class="relative z-10 max-w-5xl mx-auto px-6 py-16 flex flex-col md:flex-row items-center gap-8">
-      <div class="flex-1">
-        <div class="font-mono-dm text-[#4caf72] text-xs tracking-widest uppercase mb-3">Sistem Informasi Geografis Desa</div>
-        <h1 class="font-display text-4xl md:text-5xl font-bold text-[#f5f0e4] leading-tight mb-4">Peta Wisata &<br><span class="text-[#f0b429]">UMKM Desa</span></h1>
-        <p class="text-[#a8d8bc] text-base leading-relaxed max-w-md mb-6">Temukan destinasi wisata alam dan produk unggulan UMKM Desa Pemongkong, Jerowaru — Lombok Timur. Dukung ekonomi lokal, lestarikan budaya Sasak.</p>
-        <div class="flex gap-3">
-          <button onclick="scrollToSection('peta')" class="bg-[#c4531f] hover:bg-[#e07040] text-white px-6 py-3 rounded-full font-semibold text-sm transition-all hover:scale-105">Lihat Peta</button>
-          <button onclick="scrollToSection('konten')" class="border border-[#4caf72] text-[#a8d8bc] hover:bg-[#2d7a52]/30 px-6 py-3 rounded-full font-semibold text-sm transition-all">Jelajahi Desa</button>
-        </div>
-      </div>
-      <div id="stats" class="grid grid-cols-2 gap-3 shrink-0"></div>
-    </div>
-  </section>
-
-  <section id="peta" class="max-w-5xl mx-auto px-6 py-12">
-    <div class="flex items-end justify-between mb-6">
-      <div>
-        <div class="font-mono-dm text-[#c4531f] text-xs tracking-widest uppercase mb-1">Pemetaan Wilayah</div>
-        <h2 class="font-display text-3xl font-bold text-[#0f3b24]">Peta Desa Interaktif</h2>
-      </div>
-      <div id="desktopLegend" class="hidden md:flex gap-4 text-xs font-medium"></div>
-    </div>
-
-    <div class="relative rounded-3xl overflow-hidden border-2 border-[#c8d8c0] shadow-xl bg-[#daecd4]">
-      <svg id="mapSvg" viewBox="0 0 100 90" class="w-full" style="display:block;min-height:320px"></svg>
-      <div id="mapTooltip" class="hidden absolute top-4 right-4 bg-white/95 backdrop-blur rounded-2xl shadow-lg p-4 max-w-[180px] border border-[#c8d8c0]"></div>
-      <div id="mobileLegend" class="absolute bottom-3 left-3 flex gap-3 md:hidden"></div>
-    </div>
-  </section>
-
-  <section id="konten" class="max-w-5xl mx-auto px-6 pb-16">
-    <div id="tabs" class="flex gap-2 mb-8"></div>
-    <div id="cards" class="grid grid-cols-1 md:grid-cols-2 gap-6"></div>
-  </section>
-
-  <footer class="bg-[#0f3b24] text-[#a8d8bc] py-10 px-6">
-    <div class="max-w-5xl mx-auto flex flex-col md:flex-row items-center justify-between gap-4">
-      <div class="flex items-center gap-3">
-        <div class="w-8 h-8 rounded-full bg-[#2d7a52] flex items-center justify-center">🌿</div>
-        <div>
-          <div class="font-display text-[#f5f0e4] font-semibold">Desa Pemongkong</div>
-          <div class="font-mono-dm text-[10px] tracking-widest text-[#4caf72]">SISTEM INFORMASI DESA</div>
-        </div>
-      </div>
-      <div class="text-xs text-center">Data diperbarui: <span class="font-mono-dm text-[#f0b429]">Agustus 2026</span> · <span>Pemerintah Desa Pemongkong, Jerowaru, Lombok Timur</span></div>
-      <div class="flex gap-4 text-sm font-medium">
-        <a href="#peta" class="hover:text-[#f5f0e4] transition-colors">Peta</a>
-        <a href="#wisata" class="hover:text-[#f5f0e4] transition-colors">Wisata</a>
-        <a href="#umkm" class="hover:text-[#f5f0e4] transition-colors">UMKM</a>
-      </div>
-    </div>
-  </footer>
-</div>
-<script src="script.js"></script>
-</body>
+<!doctype html>
+<html lang="<!-- figma:lang -->">
+  <head>
+    <!-- figma:head-start -->
+    <meta charset="UTF-8" />
+    <meta name="viewport" content="width=device-width, initial-scale=1.0" />
+    <title><!-- figma:title --></title>
+    <!-- figma:head-end -->
+  </head>
+  <body>
+    <!-- figma:body-start -->
+    <div id="root"></div>
+    <script type="module" src="/src/main.tsx"></script>
+    <!-- figma:body-end -->
+  </body>
 </html>
