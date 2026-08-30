@@ -1,24 +1,24 @@
 const wisataData = [
-  { id: 1, name: 'Gili Areng', category: 'Pulau', desc: 'Gili Areng adalah salah satu pulau kecil (gili) tersembunyi di perairan sekitar Teluk Ekas, wilayah Desa Pemongkong, Kecamatan Jerowaru. Keindahan pantainya, air laut yang jernih, dan suasana alam yang tenang menjadikannya destinasi favorit bagi wisatawan yang menyukai petualangan dan relaksasi.', rating: 4.8, visitors: '1.240', img: 'https://images.unsplash.com/photo-1564460549828-f0219a31bf90?w=600&h=400&fit=crop&auto=format', jam: '07.00 – 17.00', tiket: 'Rp 10.000' },
-  { id: 2, name: 'Makam TGH. M. Sibawaihi Mutawalli', category: 'Religi', desc: 'Makam TGH. M. Sibawaihi Mutawalli merupakan destinasi wisata religi yang sangat dikenal di Lombok Timur. Beliau dikenal sebagai ulama dan tokoh pendidikan yang berperan penting dalam dakwah serta pelestarian lingkungan di wilayah Desa Pemongkong.', rating: 4.7, visitors: '890', img: 'https://images.unsplash.com/photo-1528127269322-539801943592?w=600&h=400&fit=crop&auto=format', jam: '08.00 – 18.00', tiket: 'Gratis' },
-  { id: 3, name: 'Bukit Bakotinggi', category: 'Alam Pertanian', desc: 'Bukit Bakotinggi merupakan salah satu tempat yang memiliki nilai budaya dan keagamaan bagi masyarakat setempat. Kawasan ini biasanya digunakan sebagai tempat pelaksanaan kegiatan keagamaan dan menjadi lokasi dengan panorama alam yang indah.', rating: 4.6, visitors: '2.810', img: 'https://images.unsplash.com/photo-1513415756790-2ac1db1297d0?w=600&h=400&fit=crop&auto=format', jam: '06.00 – 18.00', tiket: 'Gratis' },
-  { id: 4, name: 'Wisata Mangrove', category: 'Ekowisata', desc: 'Wisata Mangrove merupakan kawasan konservasi pesisir yang direncanakan sebagai destinasi wisata berbasis lingkungan. Lokasinya di Dusun Ujung Betok menjanjikan ekosistem mangrove yang penting untuk menjaga kelestarian pesisir dan biodiversitas.', rating: 4.5, visitors: '760', img: 'https://images.unsplash.com/photo-1500375592092-40eb2168fd21?w=600&h=400&fit=crop&auto=format', jam: '07.00 – 17.00', tiket: 'Rp 5.000' },
-  { id: 5, name: 'Sunset Point', category: 'Ekowisata', desc: 'Sunset Point merupakan hidden gem di Desa Pemongkong yang menawarkan panorama matahari terbenam dengan suasana alami dan tenang. Tempat ini menjadi pilihan yang menarik bagi wisatawan yang mencari momen sunset yang indah.', rating: 4.5, visitors: '1.650', img: 'https://images.unsplash.com/photo-1593901138884-02ee723a96f7?w=600&h=400&fit=crop&auto=format', jam: '07.00 – 17.00', tiket: 'Rp 8.000' },
-  { id: 6, name: 'Bukit Panorama', category: 'Perbukitan', desc: 'Bukit Panorama menawarkan pemandangan alam yang menawan dengan area terbuka yang cocok untuk bersantai, menikmati angin sepoi-sepoi, dan melihat hamparan lanskap Desa Pemongkong dari ketinggian.', rating: 4.9, visitors: '980', img: 'https://images.unsplash.com/photo-1588084188698-e626698fd8cb?w=600&h=400&fit=crop&auto=format', jam: '05.00 – 18.00', tiket: 'Rp 5.000' }
+  { id: 1, name: 'Gili Areng', category: 'Pulau', desc: 'Gili Areng adalah salah satu pulau kecil (gili) tersembunyi di perairan sekitar Teluk Ekas, wilayah Desa Pemongkong, Kecamatan Jerowaru. Keindahan pantainya, air laut yang jernih, dan suasana alam yang tenang menjadikannya destinasi favorit bagi wisatawan yang menyukai petualangan dan relaksasi.', rating: 4.8, visitors: '1.240', img: 'https://images.unsplash.com/photo-1564460549828-f0219a31bf90?w=600&h=400&fit=crop&auto=format', jam: '07.00 – 17.00', tiket: 'Rp 10.000', lat: -8.841137095143, lng: 116.46696040232918 },
+  { id: 2, name: 'Makam TGH. M. Sibawaihi Mutawalli', category: 'Religi', desc: 'Makam TGH. M. Sibawaihi Mutawalli merupakan destinasi wisata religi yang sangat dikenal di Lombok Timur. Beliau dikenal sebagai ulama dan tokoh pendidikan yang berperan penting dalam dakwah serta pelestarian lingkungan di wilayah Desa Pemongkong.', rating: 4.7, visitors: '890', img: 'https://images.unsplash.com/photo-1528127269322-539801943592?w=600&h=400&fit=crop&auto=format', jam: '08.00 – 18.00', tiket: 'Gratis', lat: -8.851886917561972, lng: 116.46125794368024 },
+  { id: 3, name: 'Bukit Bakotinggi', category: 'Religi', desc: 'Bukit Bakotinggi merupakan salah satu tempat yang memiliki nilai budaya dan keagamaan bagi masyarakat setempat. Kawasan ini biasanya digunakan sebagai tempat pelaksanaan kegiatan keagamaan dan menjadi lokasi dengan panorama alam yang indah.', rating: 4.6, visitors: '2.810', img: 'https://images.unsplash.com/photo-1513415756790-2ac1db1297d0?w=600&h=400&fit=crop&auto=format', jam: '06.00 – 18.00', tiket: 'Gratis', lat: -8.873051, lng: 116.474171 },
+  { id: 4, name: 'Wisata Mangrove', category: 'Ekowisata', desc: 'Wisata Mangrove merupakan kawasan konservasi pesisir yang direncanakan sebagai destinasi wisata berbasis lingkungan. Lokasinya di Dusun Ujung Betok menjanjikan ekosistem mangrove yang penting untuk menjaga kelestarian pesisir dan biodiversitas.', rating: 4.5, visitors: '760', img: 'https://images.unsplash.com/photo-1500375592092-40eb2168fd21?w=600&h=400&fit=crop&auto=format', jam: '07.00 – 17.00', tiket: 'Rp 5.000', lat: -8.842808, lng: 116.497603 },
+  { id: 5, name: 'Sunset Point', category: 'Ekowisata', desc: 'Sunset Point merupakan hidden gem di Desa Pemongkong yang menawarkan panorama matahari terbenam dengan suasana alami dan tenang. Tempat ini menjadi pilihan yang menarik bagi wisatawan yang mencari momen sunset yang indah.', rating: 4.5, visitors: '1.650', img: 'https://images.unsplash.com/photo-1593901138884-02ee723a96f7?w=600&h=400&fit=crop&auto=format', jam: '07.00 – 17.00', tiket: 'Rp 8.000', lat: -8.856070, lng: 116.458350 },
+  { id: 6, name: 'Bukit Panorama', category: 'Perbukitan', desc: 'Bukit Panorama menawarkan pemandangan alam yang menawan dengan area terbuka yang cocok untuk bersantai, menikmati angin sepoi-sepoi, dan melihat hamparan lanskap Desa Pemongkong dari ketinggian.', rating: 4.9, visitors: '980', img: 'https://images.unsplash.com/photo-1588084188698-e626698fd8cb?w=600&h=400&fit=crop&auto=format', jam: '05.00 – 18.00', tiket: 'Rp 5.000', lat: -8.8361, lng: 116.5063 }
 ];
 
 const umkmData = [
-  { id: 1, name: 'Batik Sari Nusantara', owner: 'Ibu Sari Wulandari', category: 'Kerajinan Tangan', desc: 'UMKM batik lokal yang memproduksi batik tulis dan batik cap dengan motif khas Lombok dan inspirasi budaya Sasak.', produk: ['Batik Tulis', 'Batik Cap', 'Sarung', 'Selendang'], img: 'https://images.unsplash.com/photo-1590251869641-dd94fb569954?w=600&h=400&fit=crop&auto=format', omzet: 'Rp 8,5 jt/bln', berdiri: '1998' },
-  { id: 2, name: 'Kerupuk Ulva', owner: 'Ibu Ulva', category: 'Kerajinan Bambu', desc: 'Produk anyaman bambu dan furnitur dengan sentuhan desain modern yang tetap memperhatikan kearifan lokal masyarakat desa.', produk: ['Furniture', 'Anyaman', 'Lampu Bambu', 'Dekorasi'], img: 'https://images.unsplash.com/photo-1604973104381-870c92f10343?w=600&h=400&fit=crop&auto=format', omzet: 'Rp 12 jt/bln', berdiri: '2005' },
-  { id: 3, name: 'Dapur Mak Inah', owner: 'Ibu Suminah', category: 'Kuliner', desc: 'Kuliner rumah tangga yang menyajikan hidangan khas Lombok dengan cita rasa autentik dan bahan baku lokal.', produk: ['Pecel', 'Keripik Singkong', 'Dodol', 'Jamu Tradisional'], img: 'https://images.unsplash.com/photo-1539755530862-00f623c00f52?w=600&h=400&fit=crop&auto=format', omzet: 'Rp 5,2 jt/bln', berdiri: '2012' },
-  { id: 4, name: 'Gerabah Tanah Liat', owner: 'Kelompok Ibu PKK', category: 'Keramik', desc: 'Produk gerabah dan souvenir berbahan tanah liat yang dibuat secara tradisional menjadi benda fungsional dan dekoratif.', produk: ['Pot Bunga', 'Vas', 'Piring Gerabah', 'Souvenir'], img: 'https://images.unsplash.com/photo-1590605095243-072811dbe64c?w=600&h=400&fit=crop&auto=format', omzet: 'Rp 3,8 jt/bln', berdiri: '2018' }
+  { id: 1, name: 'Terasi', owner: 'Masyarakat Desa Pemongkong', category: 'Olahan Pangan', desc: 'Terasi Tradisional Khas Inak Ita merupakan salah satu produk olahan pangan tradisional yang menjadi bagian dari potensi UMKM masyarakat setempat. Terasi ini dibuat menggunakan bahan utama udang rebon asli tanpa campuran bahan lain, sehingga memiliki cita rasa dan karakteristik yang khas.', produk: ['Terasi', 'Olahan Udang Rebon', 'Produk Lokal'], img: 'https://images.unsplash.com/photo-1547592166-23ac45744acd?w=600&h=400&fit=crop&auto=format', omzet: 'Rp 7 jt/bln', berdiri: '2010', lat: -8.8420, lng: 116.4950 },
+  { id: 2, name: 'Kerupuk Ulva', owner: 'Masyarakat Desa Pemongkong', category: 'Olahan Laut', desc: 'Kerupuk Ulva merupakan salah satu produk olahan yang memanfaatkan hasil budidaya Ulva atau yang dikenal oleh masyarakat sebagai selada laut. Produk ini menjadi salah satu bentuk kreativitas masyarakat dalam mengolah hasil budidaya laut menjadi produk pangan yang memiliki nilai tambah.', produk: ['Kerupuk Ulva', 'Olahan Rumput Laut', 'Camilan Lokal'], img: 'https://images.unsplash.com/photo-1511690743698-d9d85f2fbf38?w=600&h=400&fit=crop&auto=format', omzet: 'Rp 9 jt/bln', berdiri: '2015', lat: -8.8425, lng: 116.5038 },
+  { id: 3, name: 'Garam Halus', owner: 'Masyarakat Desa Pemongkong', category: 'Produksi Garam', desc: 'Garam halus merupakan salah satu bentuk kreativitas masyarakat dalam memanfaatkan sisa hasil produksi garam. Sisa tersebut kemudian diolah kembali sehingga menghasilkan garam halus yang dapat dimanfaatkan dan memiliki nilai ekonomi.', produk: ['Garam Halus', 'Bahan Pangan', 'Produk Tambak'], img: 'https://images.unsplash.com/photo-1615485290382-441e4d049cb5?w=600&h=400&fit=crop&auto=format', omzet: 'Rp 6 jt/bln', berdiri: '2012', lat: -8.8470, lng: 116.4860 },
+  { id: 4, name: 'Tambak Garam', owner: 'Masyarakat Desa Pemongkong', category: 'Produksi Garam', desc: 'Tambak garam merupakan salah satu potensi usaha masyarakat yang terdapat di Desa Pemongkong. Kegiatan ini memanfaatkan kondisi geografis dan lingkungan pesisir yang mendukung proses produksi garam melalui pemanfaatan air laut dan energi matahari.', produk: ['Garam Tambak', 'Produksi Garam', 'Usaha Pesisir'], img: 'https://images.unsplash.com/photo-1500375592092-40eb2168fd21?w=600&h=400&fit=crop&auto=format', omzet: 'Rp 11 jt/bln', berdiri: '2008', lat: -8.8450, lng: 116.4900 },
+  { id: 5, name: 'Anyaman Bambu', owner: 'Masyarakat Desa Pemongkong', category: 'Kerajinan', desc: 'Anyaman bambu merupakan salah satu bentuk kerajinan masyarakat yang memanfaatkan bambu sebagai bahan utama untuk membuat pagar. Kerajinan ini memiliki nilai fungsional sekaligus estetika karena dapat digunakan sebagai pembatas maupun pelengkap lingkungan rumah.', produk: ['Pagar Anyaman', 'Dekorasi', 'Kerajinan Bambu'], img: 'https://images.unsplash.com/photo-1523217582562-09d0def993a6?w=600&h=400&fit=crop&auto=format', omzet: 'Rp 4,5 jt/bln', berdiri: '2014', lat: -8.8440, lng: 116.4990 }
 ];
 
 const stats = [
   { label: 'Destinasi Wisata', value: '6', icon: '🏔️' },
-  { label: 'UMKM Aktif', value: '4', icon: '🏪' },
-  { label: 'Pengunjung/Bulan', value: '6.680', icon: '👥' },
-  { label: 'Omzet UMKM/Bln', value: 'Rp 89 jt', icon: '💰' }
+  { label: 'UMKM Aktif', value: '5', icon: '🏪' },
+  { label: 'Potensi Desa', value: '11', icon: '🌿' }
 ];
 
 let activeTab = 'wisata';
@@ -38,6 +38,11 @@ function scrollToId(id) {
   document.getElementById(id)?.scrollIntoView({ behavior: 'smooth' });
 }
 
+function openMaps(lat, lng, name) {
+  const url = `https://www.google.com/maps/dir/?api=1&destination=${lat},${lng}&travelmode=driving&destination_place_name=${encodeURIComponent(name)}`;
+  window.open(url, '_blank', 'noopener,noreferrer');
+}
+
 function starRating(rating) {
   let stars = '';
   for (let s = 1; s <= 5; s++) {
@@ -52,18 +57,17 @@ function wisataCard(w) {
   return `<article class="card wisata-card ${selected ? 'selected' : ''}" data-card="wisata-${w.id}">
     <div class="card-image"><img src="${w.img}" alt="${escapeHtml(w.name)}" loading="lazy">
       <span class="badge badge-green">${escapeHtml(w.category)}</span>
-      <span class="badge badge-right">${w.visitors} pengunjung</span>
     </div>
     <div class="card-body">
       <div class="card-title-row"><h3>${escapeHtml(w.name)}</h3>${starRating(w.rating)}</div>
       <p class="desc">${escapeHtml(w.desc || 'Belum ada deskripsi singkat untuk destinasi wisata ini.')}</p>
-      <div class="details"><div class="details-inner"><div class="detail-grid">
-        <div><div class="detail-label">Jam Buka</div><div class="detail-value">${w.jam}</div></div>
-        <div><div class="detail-label">Tiket Masuk</div><div class="detail-value ticket">${w.tiket}</div></div>
-      </div></div></div>
+      <div class="details"><div class="details-inner"><div class="product-title">Lokasi</div><div class="products"><span class="product">Desa Pemongkong</span></div></div></div>
       <div class="card-footer">
-        <div class="chips"><span class="chip">🕐 ${w.jam.split('–')[0]}</span><span class="chip orange">${w.tiket}</span></div>
-        <span class="chevron green-text">${selected ? '▲' : '▼'}</span>
+        <div class="chips"></div>
+        <div style="display:flex;align-items:center;gap:8px">
+          <button class="visit green" data-maps="${w.lat},${w.lng},${escapeHtml(w.name)}">⌖ Kunjungi</button>
+          <span class="chevron green-text">${selected ? '▲' : '▼'}</span>
+        </div>
       </div>
     </div>
   </article>`;
@@ -81,8 +85,11 @@ function umkmCard(u) {
       <p class="desc" style="margin-top:12px">${escapeHtml(u.desc || 'Belum ada deskripsi untuk produk UMKM ini.')}</p>
       <div class="details"><div class="details-inner"><div class="product-title">Produk Unggulan</div><div class="products">${u.produk.map(p => `<span class="product">${escapeHtml(p)}</span>`).join('')}</div></div></div>
       <div class="card-footer">
-        <div class="chips"><span class="chip gold">💰 ${u.omzet}</span></div>
-        <span class="chevron orange-text2">${selected ? '▲' : '▼'}</span>
+        <div class="chips"></div>
+        <div style="display:flex;align-items:center;gap:8px">
+          <button class="visit orange" data-maps="${u.lat},${u.lng},${escapeHtml(u.name)}">⌖ Kunjungi</button>
+          <span class="chevron orange-text2">${selected ? '▲' : '▼'}</span>
+        </div>
       </div>
     </div>
   </article>`;
@@ -136,11 +143,19 @@ function bindEvents() {
     document.getElementById('konten')?.scrollIntoView({ behavior: 'smooth', block: 'start' });
   }));
 
-  document.querySelectorAll('[data-card]').forEach(card => card.addEventListener('click', () => {
+  document.querySelectorAll('[data-card]').forEach(card => card.addEventListener('click', e => {
+    if (e.target.closest('[data-maps]')) return;
     const [type, id] = card.dataset.card.split('-');
     selectedCard = selectedCard === Number(id) ? null : Number(id);
     if (activeTab !== type) activeTab = type;
     render();
+  }));
+
+  document.querySelectorAll('[data-maps]').forEach(btn => btn.addEventListener('click', e => {
+    e.preventDefault();
+    e.stopPropagation();
+    const [lat, lng, ...nameParts] = btn.dataset.maps.split(',');
+    openMaps(Number(lat), Number(lng), nameParts.join(',').trim());
   }));
 
   document.querySelector('[data-action="explore"]')?.addEventListener('click', () => scrollToId('konten'));
